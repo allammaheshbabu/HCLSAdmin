@@ -16,27 +16,24 @@ import { ManageDocComponent } from './OperationalAdmin/manage-doc/manage-doc.com
 import { ManageRespComponent } from './OperationalAdmin/manage-resp/manage-resp.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "home", pathMatch: "full" }, // Home route
+  { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "login", component: LoginComponent },
   { path: "about", component: AboutComponent },
   { path: "contact", component: ContactComponent },
   { path: "activateadmin", component: ActivateAdminComponent },
   
-  // Managerial Routes
   { path: "maprofile", component: MaprofileComponent, 
     children: [
-      { path: "", redirectTo: "maprofile", pathMatch: "full" },
-        // Default route
+      { path: "", redirectTo: "home", pathMatch: "full" },
       { path: "addoadmin", component: AddOAdminComponent },
       { path: "manageoadmin", component: ManageOAdminComponent }
     ] 
   },
 
-  // Operational Routes
   { path: "oaprofile", component: OAProfileComponent,
     children: [
-      { path: "", redirectTo: "oaprofile", pathMatch: "full" },
+      { path: "", redirectTo: "home", pathMatch: "full" },
       { path: "adddoc", component: AddDocComponent },
       { path: "addresp", component: AddRespComponent },
       { path: "managedoc", component: ManageDocComponent },

@@ -10,8 +10,8 @@ export class AppComponent {
   title = 'HCLSAdmin';
   AnonymousFlag:boolean=false;
   SecureFlag:boolean=true;
-  ManagerialFlag:boolean=false;
-  OperationalFlag:boolean=true;
+  ManagerialFlag:boolean=true;
+  OperationalFlag:boolean=false;
 
   constructor(private router: Router) {}
 
