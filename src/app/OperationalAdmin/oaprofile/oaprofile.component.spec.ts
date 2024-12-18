@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MAProfileComponent } from './maprofile.component';
+import { OAProfileComponent } from './oaprofile.component';
 
-describe('MAProfileComponent', () => {
-  let component: MAProfileComponent;
-  let fixture: ComponentFixture<MAProfileComponent>;
+describe('OAProfileComponent', () => {
+  let component: OAProfileComponent;
+  let fixture: ComponentFixture<OAProfileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MAProfileComponent]
+      declarations: [OAProfileComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MAProfileComponent);
+    fixture = TestBed.createComponent(OAProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

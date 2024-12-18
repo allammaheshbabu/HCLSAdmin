@@ -13,10 +13,10 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   onLogin() {
-    if (this.email === 'admin@gmail.com' && this.password === 'admin') {
-      this.router.navigate(['/maprofile']);
-    } else {
-      alert('Invalid credentials');
-    }
+    // if (this.email === 'admin@gmail.com' && this.password === 'admin') {
+    //   this.router.navigate(['/maprofile']);
+    // } else {
+    //   alert('Invalid credentials');
+    // }
   }
 }
