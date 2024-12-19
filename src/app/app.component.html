@@ -101,10 +101,15 @@
     <div *ngIf="OperationalFlag" class="d-flex" style="width: 100%;">
       <!-- Left Side: 15% width for buttons -->
       <div class="d-flex flex-column" style="width: 15%; background-color: rgb(54, 217, 154); color: white;">
-        <button class="btn btn-primary p-2 border" routerLink="/oaprofile/adddoc">Add Doctor</button>
-        <button class="btn btn-primary p-2 border" routerLink="/oaprofile/addresp">Add Respectionist</button>
-        <button class="btn btn-primary p-2 border" routerLink="/oaprofile/managedoc">Manage Doctor</button>
-        <button class="btn btn-primary p-2 border" routerLink="/oaprofile/manageresp">Manage Respectionist</button>
+        <button class="btn btn-primary p-2 border" routerLink="/adddoc">Add Doctor</button>
+        <button class="btn btn-primary p-2 border" routerLink="/addresp">Add Receptionist</button>
+        <button class="btn btn-primary p-2 border" routerLink="/managedoc">Manage Doctor</button>
+        <button class="btn btn-primary p-2 border" routerLink="/manageresp">Manage Receptionist</button>
+        <button class="btn btn-primary p-2 border" routerLink="/addhelper">Add Helper</button>
+        <button class="btn btn-primary p-2 border" routerLink="/managehelper">Manage Helper</button>
+        <button class="btn btn-primary p-2 border" routerLink="/addlab">Add Lab</button>
+        <button class="btn btn-primary p-2 border" routerLink="/managelab">Manage Lab</button>
+        <button class="btn btn-primary p-2 border" routerLink="/oaprofile">Operational Admin Profile</button>
       </div>
 
       <!-- Right Side: 85% width for content -->
@@ -117,8 +122,9 @@
     <div *ngIf="ManagerialFlag" class="d-flex" style="width: 100%;">
       <!-- Left Side: 15% width for buttons -->
       <div class="d-flex flex-column" style="width: 15%; background-color: rgb(54, 217, 154); color: white;">
-        <button class="btn btn-primary p-2 border" routerLink="/maprofile/addoadmin">Add Admin</button>
-        <button class="btn btn-primary p-2 border" routerLink="/maprofile/manageoadmin">Manage Admin</button>
+        <button class="btn btn-primary p-2 border" routerLink="/addoadmin">Add Admin</button>
+        <button class="btn btn-primary p-2 border" routerLink="/manageoadmin">Manage Admin</button>
+        <button class="btn btn-primary p-2 border" routerLink="/maprofile">Managerial Admin Profile</button>
       </div>
 
       <!-- Right Side: 85% width for content -->

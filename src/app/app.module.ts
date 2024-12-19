@@ -17,6 +17,10 @@ import { AddRespComponent } from './OperationalAdmin/add-resp/add-resp.component
 import { ManageRespComponent } from './OperationalAdmin/manage-resp/manage-resp.component';
 import { AddDocComponent } from './OperationalAdmin/add-doc/add-doc.component';
 import { ManageDocComponent } from './OperationalAdmin/manage-doc/manage-doc.component';
+import { AddhelperComponent } from './OperationalAdmin/addhelper/addhelper.component';
+import { AddlabComponent } from './OperationalAdmin/addlab/addlab.component';
+import { ManagelabComponent } from './OperationalAdmin/managelab/managelab.component';
+import { ManagehelperComponent } from './OperationalAdmin/managehelper/managehelper.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,10 @@ import { ManageDocComponent } from './OperationalAdmin/manage-doc/manage-doc.com
     ManageRespComponent,
     AddDocComponent,
     ManageDocComponent,
+    AddhelperComponent,
+    AddlabComponent,
+    ManagelabComponent,
+    ManagehelperComponent,
   ],
   imports: [
     BrowserModule,
