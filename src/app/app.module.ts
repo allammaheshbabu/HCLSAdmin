@@ -21,6 +21,8 @@ import { AddhelperComponent } from './OperationalAdmin/addhelper/addhelper.compo
 import { AddlabComponent } from './OperationalAdmin/addlab/addlab.component';
 import { ManagelabComponent } from './OperationalAdmin/managelab/managelab.component';
 import { ManagehelperComponent } from './OperationalAdmin/managehelper/managehelper.component';
+import { AdminService } from './MyService/admin.service';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,10 @@ import { ManagehelperComponent } from './OperationalAdmin/managehelper/managehel
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(withFetch()),
+    AdminService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './maprofile.component.css'
 })
 export class MaprofileComponent {
-
+ 
 }
