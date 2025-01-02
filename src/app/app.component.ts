@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { IAdmin } from './models/IAdmin';
 
 @Component({
   selector: 'app-root',
@@ -13,32 +14,39 @@ import { Router } from '@angular/router';
     OperationalFlag: boolean = false;
   
     constructor(private router: Router) {}
+    
   
     ngOnInit(): void {
-      if (window.sessionStorage.getItem("AdminLogin") !== null) {
+      if (window.sessionStorage.getItem("AdminLogin") != null) {
         this.AnonymousFlag = false;
         this.SecureFlag = true;
     
-        const adminTypeId = window.sessionStorage.getItem("AdminTypeId");
-        if (adminTypeId !== null) {
-          if (adminTypeId === '0') {
-           
+        let adminTypeId = window.sessionStorage.getItem("AdminTypeId");
+        if (adminTypeId != null) {
+          if (adminTypeId == '0') {
             this.ManagerialFlag = true;
             this.OperationalFlag = false;
-          
           } else {
-           
             this.ManagerialFlag = false;
             this.OperationalFlag = true;
-           
           }
         }
       }
-       else {
-        window.sessionStorage.clear();
-        this.router.navigate(['/login']);
-      }
+      //  else {
+      //   window.sessionStorage.clear();
+      //   this.router.navigate(['login']).then(()=>{
+      //     window.location.reload();
+      //   });
+      // }
      
+    }
+    btn_Logout(): void{
+      
+         window.sessionStorage.clear();
+        this.router.navigate(['login']).then(()=>{
+          window.location.reload();
+        });
+
     }
     
 }

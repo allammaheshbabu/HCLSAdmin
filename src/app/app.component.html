@@ -80,7 +80,7 @@
         <div class="col-sm-7">
           <div class="row" style="padding-top: 50px; text-align: center;">
             <div class="col-sm-4" style="color: white; font-size: 20px;">
-              <span>User name :Mahesh</span>
+              <span>Name :Mahesh</span>
             </div>
             <div class="col-sm-3" style="color: white; font-size: 20px;">
               <span>Login time :3:47 PM</span>
@@ -88,7 +88,8 @@
           </div>
         </div>
         <div class="col-sm-3" style="text-align: right; padding-top: 50px;">
-          <a style="color: white; font-size: 20px; text-decoration: none;" href="#">Logout</a>
+          <!-- <a style="color: white; font-size: 20px; text-decoration: none;" href="">Logout</a> -->
+           <input type="button" id="btn_Logout" value="Logout" class=" btn btn-danger" (click)="btn_Logout()" />
         </div>
       </div>
     </div>
@@ -117,9 +118,10 @@
         <router-outlet></router-outlet> 
       </div>
     </div>
-
+       
     <!-- Managerial Container: Visible when ManagerialFlag is true -->
     <div *ngIf="ManagerialFlag" class="d-flex" style="width: 100%;">
+      
       <!-- Left Side: 15% width for buttons -->
       <div class="d-flex flex-column" style="width: 15%; background-color: rgb(54, 217, 154); color: white;">
         <button class="btn btn-primary p-2 border" routerLink="/addoadmin">Add Admin</button>

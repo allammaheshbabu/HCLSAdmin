@@ -1,12 +1,12 @@
 export interface IAdmin {
-    adminid:number;
-    adminname:string;
+    adminId:number;
+    adminName:string;
     gender:string;
     phone:number;
     email:string;
     password:string;
     address:string;
-    idproff:string;
-    activestatus:boolean;
+    id_Proof:string;
+    activeStatus:boolean;
     adminTypeId: number;
 }
