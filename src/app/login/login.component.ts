@@ -35,10 +35,8 @@ export class LoginComponent implements OnInit {
   }
   
    btn_login(): void {
-    debugger;
     this.adminService.checkAdminLogin(this.email,this.password).subscribe( data =>{
     this.Admin = data;
-
     if(this.Admin==null){
         alert("Invalid User name and Password or Not Registred");
         this.router.navigate(["home"]).then(()=>{
@@ -46,9 +44,6 @@ export class LoginComponent implements OnInit {
         });
       }
     else{
-        // alert("Login success");
-        // console.log(this.Admin);
-        // this.Admin.activestatus=true;
         debugger;
         if (!this.Admin.activeStatus) {
           this.router.navigate(["activateadmin"]).then(()=>{
@@ -80,7 +75,6 @@ export class LoginComponent implements OnInit {
       }
     },
       error => {
-
         alert(error);
         window.sessionStorage.clear();
         this.router.navigate(["/login"]);

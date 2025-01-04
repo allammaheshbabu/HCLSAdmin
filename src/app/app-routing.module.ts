@@ -17,6 +17,7 @@ import { ManageRespComponent } from './OperationalAdmin/manage-resp/manage-resp.
 import { AddlabComponent } from './OperationalAdmin/addlab/addlab.component';
 import { AddhelperComponent } from './OperationalAdmin/addhelper/addhelper.component';
 import { ManagehelperComponent } from './OperationalAdmin/managehelper/managehelper.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path:"managelab",component:ManageDocComponent},
   { path:"addhelper",component:AddhelperComponent},
   { path:"managehelper",component:ManagehelperComponent},
+  {path:"forgetpassword",component:ForgetpasswordComponent},
   { path: "**", component: PageNotFoundComponent }  
 ];
 

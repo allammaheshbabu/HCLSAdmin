@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminService } from '../MyService/admin.service';
+import { IAdmin } from '../models/IAdmin';
 
 @Component({
   selector: 'app-activate-admin',
@@ -7,10 +9,13 @@ import { Router } from '@angular/router';
   styleUrl: './activate-admin.component.css'
 })
 export class ActivateAdminComponent implements OnInit {
-  constructor(private router: Router) {}
+ email?:string;
+
+  constructor(private adminservice:AdminService, private router: Router) {}
   
-    ngOnInit(): void {
-       
+
+    ngOnInit(): void { 
+      this.email= window.sessionStorage.getItem("AdminLoginEmail")!;
       if (window.sessionStorage.getItem("AdminLogin") != null) {
     
         let adminTypeId = window.sessionStorage.getItem("AdminTypeId");
@@ -23,8 +28,42 @@ export class ActivateAdminComponent implements OnInit {
               window.location.reload();
             });
           }
-        }
-      
-      
+        }  
     }
+
+btn_active(): void {
+  debugger;
+  if (this.email==null) {
+    alert('No email found. Please login again.');
+    this.router.navigate(["login"]).then(()=>{
+      window.location.reload();
+    });
+  }
+  this.adminservice.activateAdmin(this.email!).subscribe(
+    (data) => {
+      if (data == 1) {
+        alert('Account activated successfully! Please login.');
+        this.router.navigate(["login"]).then(()=>{
+          window.location.reload();
+        });
+      } else {
+        alert('Failed to activate the account.');
+      }
+    },
+    (error) => {
+      console.error(error);
+      alert('An error occurred. Please try again later.');
+      this.router.navigate(["login"]).then(()=>{
+        window.location.reload();
+      });
+    }
+  );
+}
+
+
+
+
+
+
+  
 }

@@ -23,6 +23,7 @@ import { ManagelabComponent } from './OperationalAdmin/managelab/managelab.compo
 import { ManagehelperComponent } from './OperationalAdmin/managehelper/managehelper.component';
 import { AdminService } from './MyService/admin.service';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     AddlabComponent,
     ManagelabComponent,
     ManagehelperComponent,
+    ForgetpasswordComponent,
   ],
   imports: [
     BrowserModule,
