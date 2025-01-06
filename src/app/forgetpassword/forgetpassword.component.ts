@@ -18,9 +18,12 @@ result?:number;
 
 
  getPassword(): void {
+  if (this.email1==null) {
+    alert('No email found.'); 
+  }
  this.adminservice.bringPassword(this.email1!).subscribe((data)=>{
  this.password=data;
- alert("password retrived...!"+this.password);
+ alert("password retrived...! "+this.password);
  },
  (error) => {
   console.error(error);
@@ -28,7 +31,6 @@ result?:number;
 }
 );
 }
-
 
   changePassword():void {
     debugger;
@@ -38,7 +40,8 @@ result?:number;
     this.adminservice.changePassword(this.email2!,this.newPassword!).subscribe((data)=>{
         this.result=data;
         if(this.result==1){
-          alert('Password updated successfully...!');
+          alert('Password updated successfully. Please try to login...!');
+          this.router.navigate(['login']);
         }
         else{
           alert('Sorry some error occured! please try again...');

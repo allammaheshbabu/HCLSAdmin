@@ -26,7 +26,7 @@ changePassword(email: string, password: string): Observable<number> {
 
 bringPassword(email: string): Observable<string> {
   const url = "http://localhost:9611/api/Admin/bringPassword?Email="+email;
-  return this.http.get<string>(url);
+  return this.http.get(url, { responseType: 'text' });
 }
 
 
