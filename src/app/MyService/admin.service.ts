@@ -29,6 +29,42 @@ bringPassword(email: string): Observable<string> {
   return this.http.get(url, { responseType: 'text' });
 }
 
+// insertAdmin(admin: IAdmin): Observable<any> {
+//   const url = "http://localhost:9611/api/Admin/InsertAdmin";
+//   return this.http.post(url, admin, { responseType: 'text' });
+// }
+
+insertAdmin(admin: IAdmin): Observable<any> {
+  const url = "http://localhost:9611/api/Admin/InsertAdmin";
+  return this.http.post<any>(url, admin); 
+}
+// insertAdmin(admin: IAdmin): Observable<IAdmin> {
+//   const url = "http://localhost:9611/api/Admin/InsertAdmin";
+//   return this.http.post<IAdmin>(url, admin);
+// }
+
+
+
+GetAllAdmins(): Observable<IAdmin[]> {
+  const url = "http://localhost:9611/api/Admin/GetAllAdmins"; 
+  return this.http.get<IAdmin[]>(url); 
+}
+
+DeleteAdmin(adminId:number):Observable<any>{
+  const url = "http://localhost:9611/api/Admin/DeleteAdmin?AdminId="+adminId; 
+  return this.http.delete<number>(url,); 
+}
+
+UpdateAdmin(admin: IAdmin): Observable<number> {
+  const url = "http://localhost:9611/api/Admin/UpdateAdmin";
+  return this.http.put<number>(url, admin); 
+}
+
+
+
+
+
+
 
 
 

@@ -80,10 +80,10 @@
         <div class="col-sm-7">
           <div class="row" style="padding-top: 50px; text-align: center;">
             <div class="col-sm-4" style="color: white; font-size: 20px;">
-              <span>Name :Mahesh</span>
+              <span>Name :{{name}}</span>
             </div>
             <div class="col-sm-3" style="color: white; font-size: 20px;">
-              <span>Login time :3:47 PM</span>
+              <span>Login Time: {{ currentTime }}</span>
             </div>
           </div>
         </div>
@@ -114,9 +114,12 @@
       </div>
 
       <!-- Right Side: 85% width for content -->
-      <div class="d-flex flex-column" style="width: 85%; background-color: rgb(244, 239, 239); margin: 10px;">
-        <router-outlet></router-outlet> 
-      </div>
+     <!-- Updated content section -->
+     <div class="d-flex flex-column" style="width: 85%; background-color: rgb(244, 239, 239); margin: 10px; height:fit-content;">
+      <router-outlet></router-outlet>
+    </div>
+    
+
     </div>
        
     <!-- Managerial Container: Visible when ManagerialFlag is true -->
@@ -124,9 +127,10 @@
       
       <!-- Left Side: 15% width for buttons -->
       <div class="d-flex flex-column" style="width: 15%; background-color: rgb(54, 217, 154); color: white;">
+        <button class="btn btn-primary p-2 border" routerLink="/maprofile">Managerial Admin Profile</button>
         <button class="btn btn-primary p-2 border" routerLink="/addoadmin">Add Admin</button>
         <button class="btn btn-primary p-2 border" routerLink="/manageoadmin">Manage Admin</button>
-        <button class="btn btn-primary p-2 border" routerLink="/maprofile">Managerial Admin Profile</button>
+       
       </div>
 
       <!-- Right Side: 85% width for content -->

@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
     else{
         debugger;
         if (!this.Admin.activeStatus) {
+          window.sessionStorage.setItem("AdminLoginEmail",this.Admin.email.toString());
           this.router.navigate(["activateadmin"]).then(()=>{
             window.location.reload();
           });
@@ -53,7 +54,9 @@ export class LoginComponent implements OnInit {
         else{
           window.sessionStorage.setItem("AdminLogin",this.Admin.email.toString());
           window.sessionStorage.setItem("AdminTypeId",this.Admin.adminTypeId.toString());
+          
           if(this.Admin.adminTypeId===0){
+            window.sessionStorage.setItem("AdminName",this.Admin.adminName.toString());
             this.router.navigate(["maprofile"]).then(()=>{
               window.location.reload();
             });

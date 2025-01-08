@@ -1,1 +1,126 @@
-<p>add-oadmin works!</p>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12">
+      <div class="card shadow border-0">
+        <div class="card-header bg-dark text-white text-center">
+          <h4>Admin Registration</h4>
+        </div>
+        <div class="card-body">
+          <form>
+            <!-- Row 1: Admin Name and Gender -->
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="adminName" class="form-label">Admin Name</label>
+                  <input
+                    type="text"
+                    id="adminName"
+                    name="adminName"
+                    [(ngModel)]="admin.adminName"
+                    class="form-control"
+                    placeholder="Enter admin name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="gender" class="form-label">Gender</label>
+                  <select id="gender" name="gender" [(ngModel)]="admin.gender" class="form-control">
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Phone and Email -->
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone</label>
+                  <input
+                    type="number"
+                    id="phone"
+                    name="phone"
+                    [(ngModel)]="admin.phone"
+                    class="form-control"
+                    placeholder="Enter phone number"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email" 
+                    [(ngModel)]="admin.email"
+                    class="form-control"
+                    placeholder="Enter email address"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3: Password and Address -->
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    [(ngModel)]="admin.password"
+                    class="form-control"
+                    placeholder="Enter a secure password"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="address" class="form-label">Address</label>
+                  <textarea
+                    id="address"
+                    name="address"
+                    [(ngModel)]="admin.address"
+                    class="form-control"
+                    placeholder="Enter your address"
+                    rows="2"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 4: ID Proof -->
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="id_Proof" class="form-label">ID Proof</label>
+                  <input
+                    type="text"
+                    id="id_Proof"
+                    name="id_Proof" 
+                    [(ngModel)]="admin.id_Proof"
+                    class="form-control"
+                    placeholder="Enter ID proof details"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group text-center">
+              <button type="button" class="btn btn-success btn-block" (click)="submit()">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

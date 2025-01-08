@@ -12,11 +12,15 @@ import { IAdmin } from './models/IAdmin';
     SecureFlag: boolean = false;
     ManagerialFlag: boolean = false;
     OperationalFlag: boolean = false;
+    currentTime?: string;
+    name?:string;
   
     constructor(private router: Router) {}
     
   
     ngOnInit(): void {
+      this.currentTime = new Date().toLocaleString(); 
+       this.name= window.sessionStorage.getItem("AdminName")!;
       if (window.sessionStorage.getItem("AdminLogin") != null) {
         this.AnonymousFlag = false;
         this.SecureFlag = true;

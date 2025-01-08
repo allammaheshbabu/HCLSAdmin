@@ -12,8 +12,6 @@ export class ActivateAdminComponent implements OnInit {
  email?:string;
 
   constructor(private adminservice:AdminService, private router: Router) {}
-  
-
     ngOnInit(): void { 
       this.email= window.sessionStorage.getItem("AdminLoginEmail")!;
       if (window.sessionStorage.getItem("AdminLogin") != null) {
@@ -33,12 +31,12 @@ export class ActivateAdminComponent implements OnInit {
 
 btn_active(): void {
   debugger;
-  if (this.email==null) {
-    alert('No email found. Please login again.');
-    this.router.navigate(["login"]).then(()=>{
-      window.location.reload();
-    });
-  }
+  // if (this.email==null) {
+  //   alert('No email found. Please login again.');
+  //   this.router.navigate(["login"]).then(()=>{
+  //     window.location.reload();
+  //   });
+  // }
   this.adminservice.activateAdmin(this.email!).subscribe(
     (data) => {
       if (data == 1) {
